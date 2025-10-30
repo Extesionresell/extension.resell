@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meine Website — Dein Name</title>
+  <meta name="description" content="Eine einfache, responsive persönliche Website, bereit für GitHub Pages." />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa7b2;--accent:#7c3aed;--glass: rgba(255,255,255,0.04);--radius:14px}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071024 0%, #081428 100%)}
+    .container{max-width:980px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a.cta{background:var(--accent);padding:8px 12px;border-radius:10px;color:white}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-bottom:28px}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    h1{margin:0 0 8px 0;font-size:28px}
+    p.lead{margin:0;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center;padding:18px}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}.brand span{display:none}.container{padding:16px}}
+
+    /* simple button */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* project card */
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{display:flex;gap:12px;align-items:center}
+    .project .thumb{width:64px;height:48px;background:var(--glass);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SB</div>
+        <div>
+          <div style="font-weight:600">Dein Name</div>
+          <div class="muted">Kurzbeschreibung oder Jobtitel</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Über mich</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact" class="cta">Kontakt</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Hi — ich bin Dein Name.</h1>
+        <p class="lead">Eine sauber geordnete, responsive Startseite, die du direkt auf GitHub Pages hochladen kannst. Passe Text, Farben und Bilder unten an.</p>
+        <p style="margin-top:14px"><a class="btn btn-primary" href="#projects">Meine Arbeiten ansehen</a> <a class="btn btn-outline" href="#contact">Kontakt</a></p>
+      </div>
+
+      <div class="hero-card">
+        <h3>Was diese Seite bietet</h3>
+        <ul class="muted" style="margin:8px 0 0 18px">
+          <li>Responsive Layout (Desktop, Tablet, Mobil)</li>
+          <li>Einfache Anpassung (Name, Texte, Farben)</li>
+          <li>Bereit für GitHub Pages oder jedes static host</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="hero-card">
+      <h2>Über mich</h2>
+      <p class="muted">Schreibe hier ein bis zwei Sätze zu dir — z. B. welche Schulfächer du magst, welche Projekte du machst oder was du lernen willst.</p>
+    </section>
+
+    <section id="projects" style="margin-top:18px">
+      <h2 style="color:#dff">Projekte</h2>
+      <div class="projects">
+        <div class="project card">
+          <div class="thumb">Img</div>
+          <div>
+            <div style="font-weight:600">Projekt A</div>
+            <div class="muted">Kurze Beschreibung. Link: <a href="#">zum Repo</a></div>
+          </div>
+        </div>
+        <div class="project card">
+          <div class="thumb">Img</div>
+          <div>
+            <div style="font-weight:600">Projekt B</div>
+            <div class="muted">Kurze Beschreibung. Link: <a href="#">zum Demo</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="hero-card" style="margin-top:18px">
+      <h2>Kontakt</h2>
+      <p class="muted">E-Mail: <a href="mailto:deine.email@example.com">deine.email@example.com</a></p>
+      <p class="muted">Oder füge ein Kontaktformular / externe Form-Handler hinzu (z. B. Formspree) wenn du Nachrichten empfangen möchtest.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Dein Name — Erstellt für GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
